@@ -8,11 +8,30 @@
 </head>
 <body>
     <h1>PASSWORD GENERATOR</h1>
-    <div>
+    <form>
     <input readonly type="text" id="password" placeholder="your password">
        <button> Generate Password</button>
-    </div>
-      <script src="script.js"></script>
+    </form>
+
+      <script>
+
+        var passwordGenerator = () => {
+        var passwordLength = 8;
+        var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
+        var password = "";
+
+    for (var i= 0; i <= passwordLength; i++) {
+        var randomNumber = Math.floor(Math.random()* charset.length);
+    password += charset.substring(randomNumber, randomNumber +1);
+    }
+   
+    return password;
+}
+
+console.log(passwordGenerator())
+
+
+      </script>
 </body>
 </html>
 
