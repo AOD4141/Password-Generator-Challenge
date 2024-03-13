@@ -5,33 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="style.css">
+    
+    <script src="secondscript.js"> </script>
 </head>
 <body>
+
+    <div class="wrapper">
+        <header>
+          <h1>Password Generator</h1>
+        </header>
+        <div class="card">
+          <div class="card-header">
+            <h2>Generate a Password</h2>
+          </div>
+          <div class="card-body">
+            <textarea
+              readonly
+              id="password"
+              placeholder="Your Secure Password"
+              aria-label="Generated Password"
+            ></textarea>
+          </div>
+          <div class="card-footer">
+            <button id="generate" class="btn" onclick="document.getElementById('password').innerHTML = passwordGenerator()">Generate Password</button>
+          </div>
+        </div>
+      </div>
+
+<!-- 
+    <div class="style">
     <h1>PASSWORD GENERATOR</h1>
-    <form>
-    <input readonly type="text" id="password" placeholder="your password">
-       <button> Generate Password</button>
-    </form>
-
-      <script>
-
-        var passwordGenerator = () => {
-        var passwordLength = 8;
-        var charset = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789!@#$%^&*()";
-        var password = "";
-
-    for (var i= 0; i <= passwordLength; i++) {
-        var randomNumber = Math.floor(Math.random()* charset.length);
-    password += charset.substring(randomNumber, randomNumber +1);
-    }
-   
-    return password;
-}
-
-console.log(passwordGenerator())
-
-
-      </script>
+    <div   id="password"> </div>
+       <button id="password-btn" > Generate Password</button>
+    </div>
+    -->
+<!-- 
+      // <script src="script.js"> </script> -->
 </body>
 </html>
 
