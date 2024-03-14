@@ -22,4 +22,4 @@ function passwordGenerator ()  {
             }
 
 
- 
+     document.getElementById("generate").addEventListener("click",writePassword);
