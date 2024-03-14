@@ -1,3 +1,4 @@
+// define the function to generate the password
 
 function passwordGenerator ()  {
     var passwordLength = 8;
@@ -10,3 +11,15 @@ function passwordGenerator ()  {
     
     return password;
     }
+
+    // function to display the password
+    window.onload = function () { 
+        document.getElementById("password").innerHTML = passwordGenerator();}
+
+        function writePassword(){
+            var password = document.getElementById("password"); 
+            password.innerText = passwordGenerator();
+            }
+
+
+ 
