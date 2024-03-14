@@ -1,4 +1,4 @@
-
+//generate function for password generation
 
 function passwordGenerator ()  {
     var passwordLength = 13;
@@ -13,17 +13,19 @@ password += charset.substring(randomNumber, randomNumber +1);
 return password;
 }
 
-
+//Add window.onload to redirect the function to a web page
 
 window.onload = function () {
 document.getElementById("password").innerHTML = passwordGenerator();
 
-
-
 function writePassword() {
 var password = document.getElementById("password"); 
- password.innerText = passwordGenerator();
+password.innerText = passwordGenerator();
 }
 
 
- document.getElementById("generate").addEventListener("click",writePassword);
+//Add event listener on the generate password click
+
+document.getElementById("generate").addEventListener("click",writePassword);
+
+}
